@@ -1,0 +1,22 @@
+Which function takes long to execute a single time? See the comments on lines 21 and 28.
+How much time did the program spend in each function over the life of the program?
+Based on this data, which of the two functions should we focus on optimizing (trying to reduce execution time of the function call), and why?
+
+Profiling Analysis
+
+1.  Data Interpretation:
+   - `other_function1` (line 20 in profiling.py) is called 959 times and consumes a total of 2.001 seconds over the life of the program.
+   - `other_function2` (line 27 in profiling.py) is called 41 times and consumes a total of 0.126 seconds over the life of the program.
+
+2.  Performance Bottlenecks
+    - `other_function1` takes significantly longer compared to `other_function2`, indicating that it is the performance bottleneck in the program.
+
+    In terms of the total time spent in each function over the life of the program, other_function1 takes significantly longer compared to other_function2. 
+    This indicates that other_function1 is likely the performance bottleneck in this scenario.
+
+3. Optimization Focus:
+   - Based on the profiling data, `other_function1` should be the focus of optimization efforts due to its higher frequency of calls and longer execution time per call.
+   - Justification: Optimizing `other_function1` can lead to significant performance improvements for the overall program by reducing its execution time.
+
+Justification: The profiling data clearly shows that other_function1 accounts for the majority of the program's execution time. 
+By optimizing other_function1, we can reduce the overall runtime of the program and improve its efficiency.
