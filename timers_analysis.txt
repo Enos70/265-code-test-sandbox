@@ -1,0 +1,29 @@
+1.  What is the percentage difference in the average time between the two implementations? You may use the following formula to calculate the percentage difference: ((average_time_1 - average_time_2) / average_time_1) * 100.
+2.  Express this difference verbally, e.g. "Implementation x is 10% faster/slower than Implementation x."
+3.  Is there greater variation in the average time with the smaller or larger number of tests? What does this tell you about how sample size affects the reliability of performance measurements?
+
+Timers Analysis
+1. The percentage difference in average time between the original sort and the optimized sort is calculated as follows:
+    ((average_time_original - average_time_optimized) / average_time_original) * 100.
+
+    Test 1:
+
+    Original sort: 0.0001ms
+    Optimized sort: 0.0010ms
+    The optimized sort is 958.55% faster than the original sort.
+
+    Test 1000
+
+    Original sort: 0.0001ms
+    Optimized sort: 0.0011ms
+
+2. Expressing Verbally
+
+    - For 1 test: "The optimized sort is 958.55% faster than the original sort."
+    - For 1000 tests: "The optimized sort is 1032.45% faster than the original sort."
+
+3. In terms of variation in average time:
+    There is greater variation in the average time with the larger number of tests, indicating that a larger sample size can lead to more reliable performance measurements.
+
+4.  The conclusion is that:
+    The consistency across different sample sizes reinforces the conclusion that the optimized sort implementation provides substantial performance benefits over the original sort implementation.

@@ -8,7 +8,7 @@ The program turned out to be prematurely optimized.
 import time
 import random
 
-NUMBER_OF_TESTS = 1
+NUMBER_OF_TESTS = 1000
 
 
 # Python has a built-in function to sort lists that is optimized for performance
@@ -56,3 +56,14 @@ print(f"Original sort: {average_time_original:.4f}ms")
 
 average_time_optimized = total_time_optimized / NUMBER_OF_TESTS
 print(f"Optimized sort: {average_time_optimized:.4f}ms")
+
+# Calculate the percentage difference
+percentage_difference = ((average_time_original - average_time_optimized) / average_time_original) * 100
+
+# Express the difference verbally
+if percentage_difference > 0:
+    print(f"The optimized sort is {abs(percentage_difference):.2f}% slower than the original sort.")
+elif percentage_difference < 0:
+    print(f"The optimized sort is {abs(percentage_difference):.2f}% faster than the original sort.")
+else:
+    print("Both sorts have the same average time.")
